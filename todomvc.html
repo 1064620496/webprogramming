@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
+		<title>ToDoMVC—for mobile phone</title>
+		<meta name="description" content="ToMVC，初学者作品！" />
+		<link rel="stylesheet" href="todomvc.css">
+		<script src="todomvc.js"></script>
+		<script src="jquery.js"></script>
+	</head>
+	<body>
+		<header>
+			<section>
+				<label for="title">ToDoMVC</label>
+				<input type="text" id="addtodo" name="title" placeholder="Add event" required="required" autocomplete="off" />
+			</section>
+		</header>
+		<section class="main">
+			<h2>list <img id="selectall" src="images/notfinished.png"><span id="count">0</span></h2>
+			<ul id="list">
+				<li>
+					<input type="checkbox" onchange="" id="allitem" class="item-checkbox" /><label for="allitem"></label>
+					<p id="p-6" onclick="edit(6)"><input id='input-1' value='sddfskl' /></p>
+					<img src="images/delete.png">
+				</li>   
+			</ul>
+			<footer id="bottom">
+			    <div>
+				<span class="leftspan choose">total</span>
+				<span class="leftspan notchoose">active</span>
+				<span class="leftspan notchoose">finished</span>
+				</div>
+				<span class="rightspan">clear finished</span>
+			</footer>
+		</section>
+	</body>
+</html>

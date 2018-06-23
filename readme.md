@@ -1,0 +1,83 @@
+#ToDoMVC说明文档
+##html
+###header部分是标题和输入框
+###section h2是列表顶端，包含全选按钮和一个统计item数的span
+###section ul内的li是每一个事件item项
+###section footer部分是三个filter及清除按钮
+##css
+主要是设置body颜色，以及上方header部分颜色、字体，以及输入框位置，并且设置每一个输入的item的li的形状和内容使其更为好看，并使所有元素都水平居中。
+其次添加了一些选择的checkbox表现和全选的颜色改变以及三个filter按钮的大小改变。
+##js
+<table>
+    <tr>
+        <td>name</td>
+        <td>function</td>
+        <td>parameter</td>
+    </tr>
+    <tr>
+        <td>leave</td>
+        <td>页面关闭或刷新前保存事件和完成列表到localstorage</td>
+        <td>无</td>
+    </tr>
+    <tr>
+        <td>change</td>
+        <td>改变从localstorage接受的list为正常形式，并返回</td>
+		<td>list</td>
+    </tr>
+    <tr>
+        <td>change2</td>
+        <td>改变从localstorage接受的booleanlist为正常形式，并返回</td>
+		<td>list</td>
+    </tr>
+	<tr>
+        <td>bodyclick</td>
+        <td>全局点击，使处于编辑状态的事件item回到普通状态</td>
+		<td>无</td>
+    </tr>   
+	<tr>
+        <td>onload</td>
+        <td>从locakstorage获取数据并修改其形式，设置全局事件以及关闭刷新保存数据事件，<br/>设置三个filter事件，设置全选事件，设置输入添加item事件</td>
+		<td>无</td>
+    </tr> 
+	<tr>
+        <td>update</td>
+        <td>首先清空原列表，并置itemnum等为0，再从eventlist中取数据添加到html的list中，<br/>其间设置了list的checkbox事件，长按事件和删除事件，随后设置显示item数量以及footer的样式</td>
+		<td>无</td>
+    </tr>
+	<tr>
+        <td>edit</td>
+        <td>隐藏p添加input，并显示删除图标，添加回车输入事件，并阻止touch冒泡</td>
+		<td>i,第i个item</td>
+    </tr>
+	<tr>
+        <td>changeview</td>
+        <td>修改filter对应的view内容</td>
+		<td>i,第i种filter</td>
+    </tr>
+	<tr>
+        <td>removeitem</td>
+        <td>返回删除数据的函数闭包</td>
+		<td>i,第i个item</td>
+    </tr>
+	<tr>
+        <td>finish</td>
+        <td>返回完成选中item的函数闭包</td>
+		<td>i,第i个item</td>
+    </tr>
+	<tr>
+        <td>clearfinish</td>
+        <td>删除所有选中item</td>
+		<td>无</td>
+    </tr>
+	<tr>
+        <td>selectall</td>
+        <td>使没被选择的item都被选择，如果所有item已经被选择，全部取消选择</td>
+		<td>无</td>
+    </tr>	
+</table>
+
+#主要功能和亮点
+##主要功能：实现了老师展示的例子的所有功能，可以回车输入事件，并编辑事件，修改事件状态，并通过filter选择某种状态的事件，并能选择完成全部事件以及在所有事件完成时取消，以及删除所有完成事件。
+##亮点：通过长按选择item项进入编辑状态可以编辑内容或删除，其余时刻不行，通过点击任意非编辑框位置完成及取消编辑，或点击回车完成编辑并取消；通过click事件防止filter按钮继续穿透到多出来的item触发checkbox事件；通过@media设置大小适应手机。
+
+
