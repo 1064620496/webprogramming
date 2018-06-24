@@ -410,7 +410,6 @@ function clearfinish()
 	}
 	update();
 }
-//全选或取消全选
 function selectall()
 {
 	var flag=0;
